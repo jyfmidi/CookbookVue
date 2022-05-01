@@ -5,7 +5,7 @@
       temporary
       position="right"
     >
-      <v-list density="compact">
+      <v-list>
         <v-list-subheader>Menu</v-list-subheader>
         <v-list-item
           v-for="(item, i) in sideBarItems"
@@ -22,7 +22,9 @@
     </v-navigation-drawer>
 
     <v-app-bar prominent>
-      <v-toolbar-title>Cyber Cookbook</v-toolbar-title>
+      <v-btn>
+        <v-app-bar-title>Cyber Cookbook</v-app-bar-title>
+      </v-btn>
       <v-spacer />
       <v-btn icon="mdi-magnify" />
 
@@ -33,12 +35,13 @@
       <v-btn
         variant="outlined"
         color="primary"
+        class="ml-4 mr-4"
       >
-        Start!
+        Connect!
       </v-btn>
 
       <v-btn
-        icon="mdi-earth"
+        icon="mdi-cookie-plus"
         @click.stop="drawer = !drawer"
       />
     </v-app-bar>
@@ -53,8 +56,8 @@ export default {
   setup() {
     let drawer = ref(false);
     let sideBarItems = [
-      { text: "My Accound", icon: "mdi-account" },
-      { text: "Recipes", icon: "mdi-store" },
+      { text: "Add Ingredient", icon: "mdi-cookie-plus" },
+      { text: "Add Recipe", icon: "mdi-text-box-plus" },
     ];
 
     return { drawer, sideBarItems };
