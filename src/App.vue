@@ -1,17 +1,17 @@
 <template>
   <v-app>
-    <Home />
+    <router-view />
   </v-app>
 </template>
 
 <script>
-import Home from "./components/Home.vue";
+import Index from "./pages/Index.vue";
 
 export default {
   name: "App",
 
   components: {
-    Home,
+    Index,
   },
 
   data: () => ({}),

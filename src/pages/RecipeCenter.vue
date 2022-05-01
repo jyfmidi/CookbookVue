@@ -1,20 +1,17 @@
 <template>
   <div>
     <HeaderBar />
-    <WelcomeMain />
   </div>
 </template>
 
 <script>
-import HeaderBar from "./HeaderBar.vue";
-import WelcomeMain from "./WelcomeMain.vue";
+import HeaderBar from "../components/HeaderBar.vue";
 
 export default {
-  name: "HelloWorld",
+  name: "RecipeCenter",
 
   components: {
     HeaderBar,
-    WelcomeMain,
   },
 
   data: () => ({}),

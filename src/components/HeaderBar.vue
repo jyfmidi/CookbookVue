@@ -5,7 +5,7 @@
       temporary
       position="right"
     >
-      <v-list>
+      <v-list density="compact">
         <v-list-subheader>Menu</v-list-subheader>
         <v-list-item
           v-for="(item, i) in sideBarItems"
@@ -22,13 +22,16 @@
     </v-navigation-drawer>
 
     <v-app-bar prominent>
-      <v-btn>
+      <v-btn
+        variant="plain"
+        @click="toIndex"
+      >
         <v-app-bar-title>Cyber Cookbook</v-app-bar-title>
       </v-btn>
       <v-spacer />
       <v-btn icon="mdi-magnify" />
 
-      <v-btn>
+      <v-btn @click="toRecipeCenter">
         Recipe Center
       </v-btn>
 
@@ -50,6 +53,7 @@
 
 <script>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 export default {
   name: "HeaderBar",
 
@@ -60,7 +64,20 @@ export default {
       { text: "Add Recipe", icon: "mdi-text-box-plus" },
     ];
 
-    return { drawer, sideBarItems };
+    let router = useRouter();
+    let toIndex = () => {
+      router.push({
+        name: "Index",
+      });
+    };
+
+    let toRecipeCenter = () => {
+      router.push({
+        name: "RecipeCenter",
+      });
+    };
+
+    return { drawer, sideBarItems, toIndex, toRecipeCenter };
   },
 };
 </script>
