@@ -1,17 +1,17 @@
 <template>
   <div>
-    <HeaderBar />
+    <AppBar />
   </div>
 </template>
 
 <script>
-import HeaderBar from "../components/HeaderBar.vue";
+import AppBar from "../components/layouts/AppBar.vue";
 
 export default {
   name: "RecipeCenter",
 
   components: {
-    HeaderBar,
+    AppBar,
   },
 
   data: () => ({}),

@@ -42,7 +42,6 @@
       >
         Connect!
       </v-btn>
-
       <v-btn
         icon="mdi-cookie-plus"
         @click.stop="drawer = !drawer"
@@ -54,8 +53,9 @@
 <script>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+
 export default {
-  name: "HeaderBar",
+  name: "AppBar",
 
   setup() {
     let drawer = ref(false);

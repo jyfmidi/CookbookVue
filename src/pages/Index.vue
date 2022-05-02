@@ -1,19 +1,19 @@
 <template>
   <div>
-    <HeaderBar />
+    <AppBar />
     <IndexMain />
   </div>
 </template>
 
 <script>
-import HeaderBar from "../components/HeaderBar.vue";
-import IndexMain from "../components/IndexMain.vue";
+import AppBar from "../components/layouts/AppBar.vue";
+import IndexMain from "../components/layouts/IndexMain.vue";
 
 export default {
   name: "Index",
 
   components: {
-    HeaderBar,
+    AppBar,
     IndexMain,
   },
 
