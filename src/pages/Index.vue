@@ -1,7 +1,9 @@
 <template>
   <div>
     <AppBar />
-    <IndexMain />
+    <v-main>
+      <IndexMain />
+    </v-main>
   </div>
 </template>
 
