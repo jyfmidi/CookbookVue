@@ -29,7 +29,7 @@
       @click="toIndex"
     >
       <v-app-bar-nav-icon icon="$ethereum" />
-      <v-app-bar-title>
+      <v-app-bar-title class="myTitle">
         Cyber Cookbook
       </v-app-bar-title>
     </v-btn>
@@ -100,3 +100,7 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@import "./src/styles/variables.scss";
+</style>
