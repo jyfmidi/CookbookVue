@@ -28,21 +28,32 @@
       <v-app-bar-title>Cyber Cookbook</v-app-bar-title>
     </v-btn>
     <v-spacer />
-    <v-btn icon="mdi-magnify" />
+
+    <v-btn>
+      <v-icon
+        start
+        icon="mdi-cookie"
+      />
+      Ingredients
+    </v-btn>
 
     <v-btn @click="toRecipeCenter">
-      Recipe Center
+      <v-icon
+        start
+        icon="mdi-text-box"
+      />
+      Recipes
     </v-btn>
 
     <v-btn
       variant="outlined"
       color="primary"
-      class="ml-4 mr-4"
+      class="ml-8 mr-8"
     >
       Connect!
     </v-btn>
     <v-btn
-      icon="mdi-cookie-plus"
+      icon="mdi-text-box-plus"
       @click.stop="drawer = !drawer"
     />
   </v-app-bar>
