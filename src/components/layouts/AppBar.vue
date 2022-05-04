@@ -4,7 +4,7 @@
     temporary
     position="right"
   >
-    <v-list density="compact">
+    <v-list>
       <v-list-subheader>Menu</v-list-subheader>
       <v-list-item
         v-for="(item, i) in sideBarItems"
@@ -20,19 +20,25 @@
     </v-list>
   </v-navigation-drawer>
 
-  <v-app-bar prominent>
+  <v-app-bar
+    elevation="0"
+    :color="$vuetify.theme.themes.light.background"
+  >
     <v-btn
       variant="plain"
       @click="toIndex"
     >
-      <v-app-bar-title>Cyber Cookbook</v-app-bar-title>
+      <v-app-bar-nav-icon icon="$ethereum" />
+      <v-app-bar-title>
+        Cyber Cookbook
+      </v-app-bar-title>
     </v-btn>
     <v-spacer />
 
     <v-btn>
       <v-icon
         start
-        icon="mdi-cookie"
+        icon="$ingredient"
       />
       Ingredients
     </v-btn>
@@ -40,7 +46,7 @@
     <v-btn @click="toRecipeCenter">
       <v-icon
         start
-        icon="mdi-text-box"
+        icon="$recipe"
       />
       Recipes
     </v-btn>
@@ -50,10 +56,14 @@
       color="primary"
       class="ml-8 mr-8"
     >
+      <v-icon
+        start
+        icon="$ethereum"
+      />
       Connect!
     </v-btn>
     <v-btn
-      icon="mdi-text-box-plus"
+      icon="fa:fas fa-plus"
       @click.stop="drawer = !drawer"
     />
   </v-app-bar>
@@ -69,8 +79,8 @@ export default {
   setup() {
     let drawer = ref(false);
     let sideBarItems = [
-      { text: "Add Ingredient", icon: "mdi-cookie-plus" },
-      { text: "Add Recipe", icon: "mdi-text-box-plus" },
+      { text: "Add Ingredient", icon: "fa:fas fa-carrot" },
+      { text: "Add Recipe", icon: "fa:fas fa-kitchen-set" },
     ];
 
     let router = useRouter();
